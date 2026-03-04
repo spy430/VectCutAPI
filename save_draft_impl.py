@@ -212,6 +212,20 @@ def save_draft_background(draft_id, draft_folder, task_id):
         update_task_field(task_id, "message", "Saving draft information")
         logger.info(f"Task {task_id} progress 70%: Saving draft information.")
         
+        # 关键：dump 前必须为所有素材设置 replace_path 为「相对草稿目录」的路径，
+        # 否则 draft_info.json 里 path 为空，剪映打开草稿会显示空白。
+        # 草稿目录结构为 draft_id/assets/{audio|image|video}/material_name
+        # 使用正斜杠，兼容剪映对 JSON 内 path 的解析（Windows 下也推荐 /）
+        def _rel(*path_parts):
+            return os.path.join("assets", *path_parts).replace("\\", "/")
+        for audio in script.materials.audios:
+            audio.replace_path = _rel("audio", audio.material_name)
+        for video in script.materials.videos:
+            if video.material_type == "photo":
+                video.replace_path = _rel("image", video.material_name)
+            else:
+                video.replace_path = _rel("video", video.material_name)
+        
         script.dump(os.path.join(current_dir, f"{draft_id}/draft_info.json"))
         logger.info(f"Draft information has been saved to {os.path.join(current_dir, draft_id)}/draft_info.json.")
 

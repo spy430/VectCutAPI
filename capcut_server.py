@@ -1432,4 +1432,21 @@ def get_video_character_effect_types():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=PORT)
+    import socket
+    def _port_available(port):
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            try:
+                s.bind(('127.0.0.1', port))
+                return True
+            except OSError:
+                return False
+    port = PORT
+    for attempt in range(5):
+        if _port_available(port):
+            break
+        print(f"Port {port} is in use, trying {port + 1} ...")
+        port = PORT + attempt + 1
+    else:
+        print(f"Warning: Could not find free port in range {PORT}-{PORT+4}, using {port} (may fail).")
+    print(f"VectCutAPI server starting at http://0.0.0.0:{port}")
+    app.run(host='0.0.0.0', port=port)
