@@ -1,6 +1,16 @@
 
 # Connect AI generates via VectCutAPI [Try it online](https://www.vectcut.com)
 
+## About this repository (fork notice)
+
+This repository is a **fork** of the upstream open-source project **[VectCutAPI](https://github.com/sun-guannan/VectCutAPI)** by [sun-guannan](https://github.com/sun-guannan). It contains **independent maintenance and local changes** and is **not** an official release from the original authors. Documentation, branding, and product positioning remain with the upstream project and the VectCut community.
+
+- **Upstream:** [https://github.com/sun-guannan/VectCutAPI](https://github.com/sun-guannan/VectCutAPI)  
+- **License:** Same as upstream — [Apache License 2.0](LICENSE). Redistribution must retain copyright notices and license terms as required by Apache 2.0.  
+- **Changes here:** Fixes and edits in this fork are maintained by this repo’s contributors and do not imply endorsement by upstream. For the canonical roadmap and reporting issues, prefer the **official repository**.
+
+If anything here misattributes work or misses required notices, please open an Issue and it will be corrected promptly.
+
 ## Project Overview
 **VectCutAPI** is a powerful editing API that empowers you to take full control of your AI-generated assets, including images, audio, video, and text. It provides the precision needed to refine and customize raw AI output, such as adjusting video speed or mirroring an image. This capability effectively solves the lack of control often found in AI video generation, allowing you to easily transform your creative ideas into polished videos.
 

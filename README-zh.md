@@ -1,5 +1,15 @@
 # 通过VectCutAPI连接AI生成的一切   [在线体验](https://www.vectcut.com)
 
+## 关于本仓库（Fork 声明）
+
+本仓库基于上游开源项目 **[VectCutAPI](https://github.com/sun-guannan/VectCutAPI)**（作者 [sun-guannan](https://github.com/sun-guannan)）进行 **Fork 与个人/维护向修改**，并非官方仓库。上游原始文档、商标与产品归属仍属于原作者及 VectCut 社区。
+
+- **上游仓库**：[https://github.com/sun-guannan/VectCutAPI](https://github.com/sun-guannan/VectCutAPI)  
+- **许可证**：与上游一致，继续使用 [Apache License 2.0](LICENSE)。若您使用或再分发本仓库代码，请保留原作者版权声明与许可证文件，并遵守 Apache 2.0 义务。  
+- **修改说明**：本 fork 中的变更（如问题修复、配置或文档调整等）由本仓库维护者提交，不代表上游立场；**新功能建议、Bug 与路线图请以官方仓库为准**。欢迎同时为上游点 Star，以便社区与检索。
+
+若有不当署名或遗漏，请通过 Issue 指正，我会尽快更正。
+
 <div align="center">
 
 ```
